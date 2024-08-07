@@ -604,12 +604,10 @@
         <h3 style="font-size: 20px; font-family:  Helvetica;">Live bidding begins: <fmt:formatDate value="${auction.endDate}" pattern="dd MMM YYYY"/> at <c:out value="${auction.startTime}"/></h3>
         <br>
           <c:set var="currentDate" value="<%= new java.util.Date() %>" />
-          <c:if test="${auction.endDate.time >= currentDate.time}">
                <div class="countdown-container">
             <h3 style="color: crimson; font-family:Verdana"><div id="countdown"></div></h3>
             <div id="auctionLink"></div>
         </div>
-          </c:if>
         <!-- Notification -->
         <br>
         <c:choose>
@@ -691,12 +689,10 @@
                                     </c:when>
                                     <c:when test="${status == 1 && member != null}">
                                            <c:set var="currentDate" value="<%= new java.util.Date() %>" />
-                                           <c:if test="${auction.endDate.time > currentDate.time}">
                                                 <div class="btn-group">
                                             <button  type="button" class="btn btn-primary" data-toggle="modal" data-target="#bidModal">PLACE BID</button>
                                             <button  type="button" class="btn btn-primary" data-toggle="modal" data-target="#bidModal_">EDIT BID</button>
                                         </div>
-                                           </c:if>
                                     </c:when>
                                     <c:otherwise>
                                         <form action="${pageContext.request.contextPath}/login">
