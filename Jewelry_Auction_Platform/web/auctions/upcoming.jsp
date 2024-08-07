@@ -288,8 +288,7 @@
                 <c:when test="${not empty AUCTIONS}">
                     <c:forEach var="auction" items="${AUCTIONS}">
                         <c:set var="currentDate" value="<%= new java.util.Date()%>" />
-                        <c:if test="${auction.endDate.time >= currentDate.time}">  
-                            <div class="auction"> 
+                            <div class="auction">
                                 <div class="image-container">
                                     <img src="https://www.fortunaauction.com/wp-content/uploads/2024/06/1122-collection-image-1500.jpg" alt="Auction Image" loading="lazy"><br>
                                     <div style="  font-family: Sans serif; font-size: 50px; margin-left: 30px; color: #c0392b" class="countdown" id="countdown_${auction.auctionID}"></div>
@@ -347,7 +346,6 @@
                                 })('${auction.auctionID}', '${auction.endDate}', '${auction.startTime}');
                             </script>
                             <hr>
-                        </c:if>
                     </c:forEach>
                 </c:when>
                 <c:otherwise>
