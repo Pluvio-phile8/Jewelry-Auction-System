@@ -1,4 +1,4 @@
-Project: Jewelrt Auction Platform
+Project: Jewelry Auction Platform
 
 Description:
 There are 3 roles: Bidder(or Seller), Staff and Manager
